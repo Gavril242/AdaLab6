@@ -7,7 +7,7 @@ class TrieNode {
 
     public TrieNode(int size) {
         children = new TrieNode[size];
-        isWord = false;
+        isWord = false; //flag
     }
 
     public boolean hasChild(char c) {
@@ -81,19 +81,17 @@ class Trie {
 
 public class Main{
     public static void main(String[] args) {
-        // Create a new Trie with a size of 26 (for the 26 letters of the alphabet)
+        // Trie with a size of 26 (for the 26 letters of the alphabet in english)
         Trie trie = new Trie(26);
 
-        // Define an array of smartphone names to choose from
         String[] smartphones = {"iphone", "samsung", "samsang", "oneplus", "xiaomi", "huawei", "sony", "soney", "motorola", "moto"};
 
-        // Add 10 smartphone names to the Trie
+      //adding to tree
         for (int i = 0; i < 10; i++) {
-            // Add the smartphone name to the Trie
             trie.addWord(smartphones[i]);
         }
 
-        // Print all the smartphone names in alphabetical order
+
         trie.printWords();
 
     }
